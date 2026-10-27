@@ -1,0 +1,63 @@
+.navbar ul {
+    display: flex;
+    list-style-type: none;
+    font-size: 1.2em;
+    font-family: didot, sans-serif;
+    margin-top: 0;
+    padding: 4px 0;
+    background-color: #f4f1ee;
+    border-radius: 50px;
+    border: 6.5px solid #f0c9d4;
+    margin: 0 40px;
+}
+#title {
+    font-family: Didot, "Bodoni MT", "Palatino Linotype", Palatino, Georgia, serif;
+    font-weight: 700;
+    font-size: 5em;
+    text-align: center;
+    margin-bottom: 0;
+    color: #f0c9d4;
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+#subtitle {
+    font-family: "Bodoni Moda", serif;
+    font-weight: 400;
+    font-size: 1.6em;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #f0c9d4;
+}
+body {
+    background-color: #13294B;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    min-height: 100vh;
+    border: 10px solid #f0c9d4;
+    box-sizing: border-box;
+}
+.navbar li {
+    font-family: "Century Gothic", Avenir, "Trebuchet MS", sans-serif;
+    color: #13294B;
+    padding: 6px 0;
+    transition: color 0.2s, background-color 0.2s;
+    letter-spacing: 1px;
+    text-align: center;
+    flex: 1;
+}
+.navbar li + li {
+    border-left: 1px solid #cfc8c1;
+}
+.navbar li span {
+    display: inline-block;
+    padding: 6px 14px;
+    border: 4px solid transparent;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.navbar li span:hover {
+    cursor: pointer;
+    border: 4px solid #e8a0b4;
+    background-color: #f0c9d4;
+}
