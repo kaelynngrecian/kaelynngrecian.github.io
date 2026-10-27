@@ -60,23 +60,37 @@ body {
     cursor: pointer;
     border: 4px solid #e8a0b4;
     background-color: #f0c9d4;
+    outline: none;
 }
 @media (max-width: 600px) {
     body {
         border-width: 6px;
-        border-color: #f0c9d4;
     }
+
     .navbar ul {
-        flex-wrap: wrap;
-        margin: 0 16px;
+        margin: 0 12px;
         border-width: 4px;
         border-radius: 30px;
-        font-size: 1em;
+        font-size: 0.8em;
+        padding: 8px 0;
     }
-    .navbar li + li{
+
+    .navbar li {
+        flex: 1;
+        min-width: 0;
+        padding: 4px 2px;
+        letter-spacing: 0;
+    }
+
+    .navbar li + li {
         border-left: none;
     }
-    .navbar li {
-        flex: 1 1 50%;
+
+    .navbar li span,
+    .navbar li span:hover,
+    .navbar li span:active,
+    .navbar li span:focus {
+        padding: 4px 6px;
+        border-width: 2px;
     }
 }
