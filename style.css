@@ -1,19 +1,38 @@
-.navbar ul {
+.content {
     display: flex;
-    list-style-type: none;
-    font-size: 1.2em;
-    font-family: didot, sans-serif;
-    margin-top: 0;
-    padding: 4px 0;
-    background-color: #f4f1ee;
-    border-radius: 50px;
-    border: 6.5px solid #f0c9d4;
-    margin: 0 40px;
+    align-items: flex-start;
+    gap: 0px;
 }
+.page {
+    flex: 1;
+    color: #f0c9d4;
+    font-family: 'Book Antiqua', Palatino, serif;
+    font-weight: 500;
+    font-size: 20px;
+    padding: 0 60px;
+    padding-top: 30px;
+    line-height: 1.6;
+}
+.left {
+    width: 250px;
+    flex-shrink: 0;
+}
+.left p {
+    margin: 50px 0 0 40px;
+    color: #f0c9d4;
+    font-family: 'Book Antiqua', Palatino, serif;
+    font-size: 20px;
+    line-height: 1.6;
+    font-weight: 500;
+}
+.page p {
+    margin-bottom: 1.2em;
+}
+
 #title {
     font-family: Didot, "Bodoni MT", "Palatino Linotype", Palatino, Georgia, serif;
     font-weight: 700;
-    font-size: clamp(2.2em, 9vw, 5em);
+    font-size: clamp(2.2em, 9vw, 4em);
     text-align: center;
     margin-bottom: 0;
     color: #f0c9d4;
@@ -23,7 +42,7 @@
 #subtitle {
     font-family: "Bodoni Moda", serif;
     font-weight: 400;
-    font-size: clamp(1em, 3.5vw, 1.6em);
+    font-size: clamp(1em, 3.5vw, 1.3em);
     text-align: center;
     margin-bottom: 30px;
     color: #f0c9d4;
@@ -36,6 +55,7 @@ body {
     min-height: 100vh;
     border: 10px solid #f0c9d4;
     box-sizing: border-box;
+    width: 1440px;
 }
 .navbar li {
     font-family: "Century Gothic", Avenir, "Trebuchet MS", sans-serif;
@@ -46,18 +66,58 @@ body {
     text-align: center;
     flex: 1;
 }
-.headshot{width: 200px; border-radius: 50; display: block; margin: 20px auto;}
+.headshot {
+    object-fit: cover;
+    object-position: center bottom;
+    border-radius: 10px;
+    border: 6px solid #f4f1ee;
+}
 
+.navbar ul {
+  display: flex;
+  align-items: stretch;
+  list-style: none;
+  margin: 0 10px;
+  padding: 2px 0;
+  font-size: 15px;
+  background-color: #f4f1ee;
+  border: 6px solid #f0c9d4;
+  border-radius: 40px;
+}
+
+.navbar li span {
+  display: inline-block;
+  padding: 8px 16px;
+  border: 4px solid transparent;
+  border-radius: 8px;
+}
+
+.navbar li span.active {
+  border: 4px solid #e8a0b4;
+  background-color: #f0c9d4;
+}
+.navbar li a {
+  display: inline-block;
+  color: #13294B;
+  text-decoration: none;
+  padding: 4px 16px;
+  border: 4px solid transparent;
+  border-radius: 8px;
 }
 .navbar li + li {
-    border-left: 1px solid #cfc8c1;
+  border-left: 3px solid #f0c9d4;
 }
-.navbar li span {
-    display: inline-block;
-    padding: 6px 14px;
-    border: 4px solid transparent;
-    border-radius: 6px;
-    cursor: pointer;
+.navbar li a:hover,
+.navbar li a.active {
+  border-color: #e8a0b4;
+  background-color: #f0c9d4;
+}
+
+.navbar li a span,
+.navbar li a span:hover {
+  padding: 0;
+  border: none;
+  background: none;
 }
 .navbar li span:hover {
     cursor: pointer;
@@ -96,4 +156,192 @@ body {
         padding: 4px 6px;
         border-width: 2px;
     }
+}
+.photo2 {
+    display: block;
+    margin-left: auto;
+    width: 300px;
+    height: 214px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 6px solid #f4f1ee;
+}
+.simple-page {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 40px;
+  color: #f4d6d6; 
+  font-family: "Book Antiqua", serif;
+  line-height: 1.6;
+}
+.full-width {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 40px 60px;
+  clear: both;
+  font-family: "Book Antiqua", serif;
+  color: #f4d6dc;
+  line-height: 1.6;
+}
+.left {
+  background-color: #f0c9d4;
+  padding: 10px;
+  border-radius: 20px;
+  box-sizing: border-box;
+  height: auto;
+  overflow: hidden;
+  margin-left: 60px;
+  margin-top: 30px;
+}
+
+.left .headshot {
+  display: block;
+  width: 360px;
+  height: auto;
+  box-sizing: border-box;
+}
+
+.left .quote {
+  font-style: italic;
+  color: #17284b;
+  margin: 16px 0 8px;
+  padding: 0 14px;
+  line-height: 1.5;
+  font-size: 15px;
+}
+
+.left .quote-author {
+  font-weight: bold;
+  color: #17284b;
+  margin: 0;
+  padding: 0 14px 12px;
+  font-size: 13px;
+}
+
+.left {
+  box-sizing: border-box;
+}
+
+.left .headshot {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+.content {
+  display: flow-root;
+  padding: 30px 60px;
+  gap: 0;
+}
+
+.left {
+  float: left;
+  margin: 0 30px 10px -20px;
+}
+
+.photo2 {
+  float: right;
+  display: block;
+  margin: -12px -10px 5px 20px;
+}
+
+.essay {
+  color: #f0c9d4;
+  font-family: 'Book Antiqua', Palatino, serif;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0 -15px 1.2em -13px;
+}
+.resume-section {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 0 20px;
+  text-align: left;
+}
+
+.resume-heading {
+  font-family: Didot, "Bodoni MT", "Palatino Linotype", Palatino, Georgia, serif;
+  color: #f0c9d4;
+  margin: 0 0 20px;
+}
+
+.download-btn {
+  display: inline-block;
+  background-color: #f0c9d4;
+  color: #13294B;
+  font-family: 'Book Antiqua', Palatino, serif;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 12px 28px;
+  border-radius: 50px;
+  margin-bottom: 20px;
+}
+
+.resume-viewer {
+  display: block;
+  width: 100%;
+  height: 1000px;
+  border: 6px solid #f4f1ee;
+  border-radius: 10px;
+}
+.statement-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  width: auto;
+  max-width: none;
+  margin: 0 30px 0px 40px;
+}
+
+.statement-photo {
+  width: 35%;
+  height: auto;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  border: 4px solid white;
+  border-radius: 20px;
+}
+
+.statement-text {
+  flex: 1 1 0;
+  min-width: 0;
+  box-sizing: border-box;
+  background-color: #f0c9d4;
+  border: 4px solid #e8a0b4;
+  border-radius: 20px;
+  padding: 20px 25px 0;
+  color: #13294B;
+  font-family: "Palatino", "Palatino Linotype", serif;
+  font-size: 20px;
+  line-height: 2;
+  min-height: 0;
+
+}
+.statement-text p:last-child {
+  margin-bottom: 0;
+}
+.statement-text p {
+  margin: 0 0 1.5em;
+}
+.statement-quote {
+  text-align: center;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 1px 60px;
+  border: 5px solid #f0c9d4;
+  color: #f0c9d4;
+  font-family: "Book Antiqua", serif;
+  font-style: italic;
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+.quote-author {
+  font-size: 18px;
+  font-style: normal;
+  margin-bottom: 20px;
+  margin-top: 10px;
 }
